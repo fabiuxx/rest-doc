@@ -14,7 +14,7 @@ import fa.gs.utils.restdoc.types.scalar.TNumber;
 public class TDouble extends TNumber {
 
     public TDouble() {
-        super("float8", "-inf", "+inf");
+        super("Float8", "-inf", "+inf");
     }
 
 }

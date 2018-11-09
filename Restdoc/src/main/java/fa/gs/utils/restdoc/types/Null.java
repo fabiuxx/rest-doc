@@ -11,11 +11,15 @@ package fa.gs.utils.restdoc.types;
  */
 public class Null extends Literal<Null> {
 
-    public Null() {
+    private Null() {
         super(null, "null", false);
         name("Null");
         alias("Nil");
         containedType(Null.this);
+    }
+
+    public static Null instance() {
+        return new Null();
     }
 
 }

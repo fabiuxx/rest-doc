@@ -14,7 +14,7 @@ import fa.gs.utils.restdoc.types.scalar.TNumber;
 public class TFloat extends TNumber {
 
     public TFloat() {
-        super("float4", "-inf", "+inf");
+        super("Float4", "-inf", "+inf");
     }
 
 }

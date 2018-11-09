@@ -18,7 +18,7 @@ public class TInteger extends TNumber {
     }
 
     public TInteger(boolean signed) {
-        super("int32", 32, signed);
+        super("Int32", 32, signed);
     }
 
 }

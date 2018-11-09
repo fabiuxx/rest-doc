@@ -18,7 +18,7 @@ public class TLong extends TNumber {
     }
 
     public TLong(boolean signed) {
-        super("int64", 64, signed);
+        super("Int64", 64, signed);
     }
 
 }

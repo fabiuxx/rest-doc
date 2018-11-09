@@ -13,13 +13,18 @@ import fa.gs.utils.restdoc.text.Text;
  */
 public interface Descriptable<T extends Descriptable<T>> extends Attributable<T> {
 
-    default public String description() {
+    default public Text description() {
         return get("description");
     }
 
     default public T description(Text description) {
         set("description", description);
         return (T) this;
+    }
+
+    default public T description(String... lines) {
+        Text text = Text.instance(lines);
+        return description(text);
     }
 
 }

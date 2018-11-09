@@ -5,14 +5,34 @@
  */
 package fa.gs.utils.restdoc.text;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  *
  * @author Fabio A. González Sosa
  */
-public interface Text {
+public class Text {
 
-    public Collection<String> text();
+    private final Collection<String> lines;
+
+    private Text() {
+        this.lines = new LinkedList<>();
+    }
+
+    public static Text instance() {
+        return new Text();
+    }
+
+    public static Text instance(String... lines) {
+        Text text = new Text();
+        text.lines.addAll(Arrays.asList(lines));
+        return text;
+    }
+
+    public Collection<String> text() {
+        return lines;
+    }
 
 }

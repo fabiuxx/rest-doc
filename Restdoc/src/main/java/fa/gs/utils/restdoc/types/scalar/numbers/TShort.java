@@ -18,7 +18,7 @@ public class TShort extends TNumber {
     }
 
     public TShort(boolean signed) {
-        super("int16", 16, signed);
+        super("Int16", 16, signed);
     }
 
 }

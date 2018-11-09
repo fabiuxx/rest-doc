@@ -5,18 +5,20 @@
  */
 package fa.gs.utils.restdoc.mixins;
 
+import fa.gs.utils.restdoc.text.Example;
+
 /**
  *
  * @author Fabio A. González Sosa
  */
-public interface Valuable<V, T extends Valuable<V, T>> extends Attributable<T> {
+public interface Exemplifiable<T extends Exemplifiable<T>> extends Attributable<T> {
 
-    default public V value() {
-        return get("value");
+    default public Example example() {
+        return get("example");
     }
 
-    default public T value(V value) {
-        set("value", value);
+    default public T quoted(Example example) {
+        set("example", example);
         return (T) this;
     }
 

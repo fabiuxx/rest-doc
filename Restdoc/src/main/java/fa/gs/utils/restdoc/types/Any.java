@@ -6,10 +6,7 @@
 package fa.gs.utils.restdoc.types;
 
 import fa.gs.utils.restdoc.mixins.AttributableImpl;
-import fa.gs.utils.restdoc.text.EmptyText;
 import fa.gs.utils.restdoc.text.Text;
-import java.util.Collections;
-import java.util.Map;
 
 /**
  *
@@ -17,19 +14,10 @@ import java.util.Map;
  */
 public class Any<T extends Any<T>> extends AttributableImpl<T> implements Type<T> {
 
-    public Any() {
-        this("Any");
-    }
-
     protected Any(String name) {
-        this(name, name, EmptyText.instance(), Collections.EMPTY_MAP);
-    }
-
-    protected Any(String name, String alias, Text description, Map<String, Object> attributes) {
         name(name);
-        alias(alias);
-        description(description);
-        set(attributes);
+        alias(name);
+        description(Text.instance());
     }
 
 }

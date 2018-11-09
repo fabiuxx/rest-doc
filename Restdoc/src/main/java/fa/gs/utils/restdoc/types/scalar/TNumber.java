@@ -16,15 +16,15 @@ import java.math.BigInteger;
 public class TNumber extends Any<TNumber> implements Sizeable<TNumber> {
 
     protected TNumber(String alias, int nbits, boolean signed) {
-        super("Number");
-        alias(alias);
+        super(alias);
+        alias("Number");
         minSize(TNumber.size_min(nbits, signed));
         maxSize(TNumber.size_max(nbits, signed));
     }
 
     protected TNumber(String alias, String minSize, String maxSize) {
-        super("Number");
-        alias(alias);
+        super(alias);
+        alias("Number");
         minSize(minSize);
         maxSize(maxSize);
     }

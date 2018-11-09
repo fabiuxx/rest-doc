@@ -13,13 +13,17 @@ import fa.gs.utils.restdoc.mixins.Valuable;
  *
  * @author Fabio A. González Sosa
  */
-public class Literal<T extends Type> extends Any<Literal<T>> implements Quotable<Literal<T>>, Valuable<Literal<T>>, TypeContaineable<Literal<T>> {
+public class Literal<T extends Type> extends Any<Literal<T>> implements Quotable<Literal<T>>, Valuable<String, Literal<T>>, TypeContaineable<Literal<T>> {
 
     public Literal(T type, String value, boolean quoted) {
         super("Literal");
         containedType(type);
         value(value);
         quoted(quoted);
+    }
+
+    public static <P extends Type> Literal<P> of(P type) {
+        return Literal.of(type, "", false);
     }
 
     public static <P extends Type> Literal<P> of(P type, String value) {

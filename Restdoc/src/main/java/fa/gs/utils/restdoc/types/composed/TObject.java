@@ -5,12 +5,11 @@
  */
 package fa.gs.utils.restdoc.types.composed;
 
+import fa.gs.utils.restdoc.mixins.AttributableImpl;
 import fa.gs.utils.restdoc.mixins.Descriptable;
 import fa.gs.utils.restdoc.mixins.Nameable;
 import fa.gs.utils.restdoc.mixins.Requireable;
-import fa.gs.utils.restdoc.mixins.AttributableImpl;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
-import fa.gs.utils.restdoc.text.EmptyText;
 import fa.gs.utils.restdoc.text.Text;
 import fa.gs.utils.restdoc.types.Any;
 import fa.gs.utils.restdoc.types.Type;
@@ -32,7 +31,7 @@ public class TObject extends Any<TObject> {
     }
 
     public TObject property(String name, Type type) {
-        return property(name, type, EmptyText.instance());
+        return property(name, type, Text.instance());
     }
 
     public TObject property(String name, Type type, Text description) {

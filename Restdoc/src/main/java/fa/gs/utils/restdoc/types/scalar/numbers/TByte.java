@@ -18,7 +18,7 @@ public class TByte extends TNumber {
     }
 
     public TByte(boolean signed) {
-        super("int8", 8, signed);
+        super("Int8", 8, signed);
     }
 
 }

@@ -9,14 +9,14 @@ package fa.gs.utils.restdoc.mixins;
  *
  * @author Fabio A. González Sosa
  */
-public interface Valuable<V, T extends Valuable<V, T>> extends Attributable<T> {
+public interface Patternable<T extends Patternable<T>> extends Attributable<T> {
 
-    default public V value() {
-        return get("value");
+    default public String pattern() {
+        return get("pattern");
     }
 
-    default public T value(V value) {
-        set("value", value);
+    default public T pattern(String pattern) {
+        set("pattern", pattern);
         return (T) this;
     }
 
