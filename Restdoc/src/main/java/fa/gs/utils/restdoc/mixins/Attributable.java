@@ -13,6 +13,8 @@ import java.util.Map;
  */
 public interface Attributable<T extends Attributable<T>> {
 
+    public boolean has(String name);
+
     public T set(String name, Object value);
 
     default public T set(Map<String, Object> attributes) {

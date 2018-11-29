@@ -28,8 +28,16 @@ public class Types {
         return Null.instance();
     }
 
+    public static <T extends Type> Literal<T> Literal(T type) {
+        return Literal.of(type);
+    }
+
     public static <T extends Type> Literal<T> Literal(T type, String value) {
         return Literal.of(type, value);
+    }
+
+    public static <T extends Type> Literal<T> Literal(T type, String value, boolean quoted) {
+        return Literal.of(type, value, quoted);
     }
 
     public static TBoolean Boolean() {

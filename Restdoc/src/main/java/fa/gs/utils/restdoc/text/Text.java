@@ -35,4 +35,8 @@ public class Text {
         return lines;
     }
 
+    public boolean isEmpty() {
+        return lines.isEmpty();
+    }
+
 }

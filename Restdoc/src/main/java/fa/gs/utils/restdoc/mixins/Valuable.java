@@ -20,4 +20,8 @@ public interface Valuable<V, T extends Valuable<V, T>> extends Attributable<T> {
         return (T) this;
     }
 
+    default public boolean hasValue() {
+        return has("value") && get("value") != null;
+    }
+
 }

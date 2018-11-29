@@ -17,9 +17,13 @@ public interface Exemplifiable<T extends Exemplifiable<T>> extends Attributable<
         return get("example");
     }
 
-    default public T quoted(Example example) {
+    default public T example(Example example) {
         set("example", example);
         return (T) this;
+    }
+
+    default public boolean hasExample() {
+        return has("example") && get("example") != null;
     }
 
 }

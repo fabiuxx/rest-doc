@@ -21,6 +21,11 @@ public class AttributableImpl<T extends AttributableImpl<T>> implements Attribut
     }
 
     @Override
+    public boolean has(String name) {
+        return attributes.containsKey(name);
+    }
+
+    @Override
     public T set(String name, Object value) {
         attributes.put(name, value);
         return (T) this;

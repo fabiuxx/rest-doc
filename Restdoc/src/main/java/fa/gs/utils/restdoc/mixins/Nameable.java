@@ -29,4 +29,12 @@ public interface Nameable<T extends Nameable<T>> extends Attributable<T> {
         return (T) this;
     }
 
+    default public boolean hasName() {
+        return has("name") && get("name") != null;
+    }
+
+    default public boolean hasAlias() {
+        return has("alias") && get("alias") != null;
+    }
+
 }

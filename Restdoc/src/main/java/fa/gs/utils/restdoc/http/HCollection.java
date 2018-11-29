@@ -22,8 +22,8 @@ public class HCollection<T extends Nameable<T>> {
         this.elements = new HashMap<>();
     }
 
-    public HCollection<T> add(T header) {
-        this.elements.put(header.name(), header);
+    public HCollection<T> add(T element) {
+        this.elements.put(element.name(), element);
         return this;
     }
 

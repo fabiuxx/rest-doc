@@ -33,13 +33,13 @@ public class MediaType extends AttributableImpl<MediaType> implements Type<Media
         return this;
     }
 
+    public String type() {
+        return get("type");
+    }
+
     public final MediaType subType(String subType) {
         set("subType", subType);
         return this;
-    }
-
-    public String type() {
-        return get("type");
     }
 
     public String subType() {

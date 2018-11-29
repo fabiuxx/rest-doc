@@ -27,4 +27,8 @@ public interface Descriptable<T extends Descriptable<T>> extends Attributable<T>
         return description(text);
     }
 
+    default public boolean hasDescription() {
+        return has("description") && get("description") != null;
+    }
+
 }

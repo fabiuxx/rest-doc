@@ -20,4 +20,8 @@ public interface Patternable<T extends Patternable<T>> extends Attributable<T> {
         return (T) this;
     }
 
+    default public boolean hasPattern() {
+        return has("pattern") && get("pattern") != null;
+    }
+
 }
