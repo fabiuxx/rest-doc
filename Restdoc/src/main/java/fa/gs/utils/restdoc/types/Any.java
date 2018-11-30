@@ -22,4 +22,12 @@ public class Any<T extends Any<T>> extends AttributableImpl<T> implements Type<T
         example();
     }
 
+    public static Any instance() {
+        return instance("any");
+    }
+
+    public static Any instance(String name) {
+        return new Any(name);
+    }
+
 }

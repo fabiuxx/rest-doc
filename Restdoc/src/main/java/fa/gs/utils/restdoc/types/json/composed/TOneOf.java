@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types.composed;
+package fa.gs.utils.restdoc.types.json.composed;
 
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
 import fa.gs.utils.restdoc.types.Any;
-import fa.gs.utils.restdoc.types.Literal;
 import fa.gs.utils.restdoc.types.Type;
+import fa.gs.utils.restdoc.types.json.Literal;
 import java.util.Collection;
 import java.util.LinkedList;
 

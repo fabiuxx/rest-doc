@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types.composed;
+package fa.gs.utils.restdoc.types.json.composed;
 
 import fa.gs.utils.restdoc.mixins.Sizeable;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;

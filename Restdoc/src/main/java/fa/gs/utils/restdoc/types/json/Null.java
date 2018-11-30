@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types;
+package fa.gs.utils.restdoc.types.json;
 
 /**
  *

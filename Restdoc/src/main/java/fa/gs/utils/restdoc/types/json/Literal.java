@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types;
+package fa.gs.utils.restdoc.types.json;
 
 import fa.gs.utils.restdoc.mixins.Quotable;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
 import fa.gs.utils.restdoc.mixins.Valuable;
+import fa.gs.utils.restdoc.types.Any;
+import fa.gs.utils.restdoc.types.Type;
 
 /**
  *

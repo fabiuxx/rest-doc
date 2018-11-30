@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types;
+package fa.gs.utils.restdoc.types.json;
 
-import fa.gs.utils.restdoc.types.scalar.TBoolean;
-import fa.gs.utils.restdoc.types.scalar.TString;
-import fa.gs.utils.restdoc.types.scalar.numbers.TByte;
-import fa.gs.utils.restdoc.types.scalar.numbers.TDouble;
-import fa.gs.utils.restdoc.types.scalar.numbers.TFloat;
-import fa.gs.utils.restdoc.types.scalar.numbers.TInteger;
-import fa.gs.utils.restdoc.types.scalar.numbers.TLong;
-import fa.gs.utils.restdoc.types.scalar.numbers.TShort;
+import fa.gs.utils.restdoc.types.Any;
+import fa.gs.utils.restdoc.types.Type;
+import fa.gs.utils.restdoc.types.json.scalar.TBoolean;
+import fa.gs.utils.restdoc.types.json.scalar.TString;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TByte;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TDouble;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TFloat;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TInteger;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TLong;
+import fa.gs.utils.restdoc.types.json.scalar.numbers.TShort;
 
 /**
  *
@@ -21,7 +23,7 @@ import fa.gs.utils.restdoc.types.scalar.numbers.TShort;
 public class Types {
 
     public static Any Any() {
-        return new Any("Any");
+        return Any.instance("Any");
     }
 
     public static Null Null() {

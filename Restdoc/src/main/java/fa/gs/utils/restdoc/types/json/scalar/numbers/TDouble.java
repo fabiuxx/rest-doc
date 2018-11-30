@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types.scalar.numbers;
+package fa.gs.utils.restdoc.types.json.scalar.numbers;
 
-import fa.gs.utils.restdoc.types.scalar.TNumber;
+import fa.gs.utils.restdoc.types.json.scalar.TNumber;
 
 /**
  *

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types.scalar;
+package fa.gs.utils.restdoc.types.json.scalar;
 
 import fa.gs.utils.restdoc.types.Any;
-import fa.gs.utils.restdoc.types.Literal;
+import fa.gs.utils.restdoc.types.json.Literal;
 
 /**
  *

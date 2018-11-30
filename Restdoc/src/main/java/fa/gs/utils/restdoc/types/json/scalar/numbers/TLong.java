@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fa.gs.utils.restdoc.types.scalar.numbers;
+package fa.gs.utils.restdoc.types.json.scalar.numbers;
 
-import fa.gs.utils.restdoc.types.scalar.TNumber;
+import fa.gs.utils.restdoc.types.json.scalar.TNumber;
 
 /**
  *
  * @author Fabio A. González Sosa
  */
-public class TShort extends TNumber {
+public class TLong extends TNumber {
 
-    public TShort() {
+    public TLong() {
         this(true);
     }
 
-    public TShort(boolean signed) {
-        super("Int16", 16, signed);
+    public TLong(boolean signed) {
+        super("Int64", 64, signed);
     }
 
 }
