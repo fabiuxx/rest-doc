@@ -27,11 +27,21 @@ public class Text {
 
     public static Text instance(String... lines) {
         Text text = new Text();
-        text.lines.addAll(Arrays.asList(lines));
+        text.lines(lines);
         return text;
     }
 
-    public Collection<String> text() {
+    public Text line(String line) {
+        this.lines.add(line);
+        return this;
+    }
+
+    public Text lines(String... lines) {
+        this.lines.addAll(Arrays.asList(lines));
+        return this;
+    }
+
+    public Collection<String> lines() {
         return lines;
     }
 

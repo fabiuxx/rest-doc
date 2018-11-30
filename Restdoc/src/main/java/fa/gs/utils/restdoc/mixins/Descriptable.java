@@ -28,7 +28,7 @@ public interface Descriptable<T extends Descriptable<T>> extends Attributable<T>
     }
 
     default public boolean hasDescription() {
-        return has("description") && get("description") != null;
+        return has("description") && get("description") != null && !description().isEmpty();
     }
 
 }

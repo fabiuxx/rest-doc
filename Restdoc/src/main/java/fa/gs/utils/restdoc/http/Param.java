@@ -7,25 +7,25 @@ package fa.gs.utils.restdoc.http;
 
 import fa.gs.utils.restdoc.mixins.AttributableImpl;
 import fa.gs.utils.restdoc.mixins.Descriptable;
+import fa.gs.utils.restdoc.mixins.Exemplifiable;
 import fa.gs.utils.restdoc.mixins.Nameable;
 import fa.gs.utils.restdoc.mixins.Requireable;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
-import fa.gs.utils.restdoc.mixins.Valuable;
 import fa.gs.utils.restdoc.text.Text;
-import fa.gs.utils.restdoc.types.Types;
+import fa.gs.utils.restdoc.types.json.Types;
 
 /**
  *
  * @author Fabio A. González Sosa
  */
-public class Param extends AttributableImpl<Param> implements Nameable<Param>, Descriptable<Param>, Valuable<Text, Param>, Requireable<Param>, TypeContaineable<Param> {
+public class Param extends AttributableImpl<Param> implements Nameable<Param>, Descriptable<Param>, Requireable<Param>, TypeContaineable<Param>, Exemplifiable<Param> {
 
     private Param(String name) {
         name(name);
         alias(name);
         description(Text.instance());
         required(Boolean.TRUE);
-        value(Text.instance());
+        example(null);
         containedType(Types.String());
     }
 

@@ -46,4 +46,12 @@ public class Path extends AttributableImpl<Path> implements Valuable<String, Pat
         return queryParams.elements();
     }
 
+    public final boolean hasPathParams() {
+        return pathParams != null && !pathParams.isEmpty();
+    }
+
+    public final boolean hasQueryParams() {
+        return queryParams != null && !queryParams.isEmpty();
+    }
+
 }

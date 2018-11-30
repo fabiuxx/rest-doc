@@ -31,4 +31,8 @@ public class HCollection<T extends Nameable<T>> {
         return this.elements.values();
     }
 
+    public boolean isEmpty() {
+        return this.elements.isEmpty();
+    }
+
 }
