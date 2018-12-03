@@ -11,10 +11,11 @@ import fa.gs.utils.restdoc.mixins.Nameable;
 import fa.gs.utils.restdoc.mixins.Requireable;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
 import fa.gs.utils.restdoc.text.Text;
-import fa.gs.utils.restdoc.types.Any;
 import fa.gs.utils.restdoc.types.Type;
+import fa.gs.utils.restdoc.types.json.Any;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -50,6 +51,25 @@ public class TObject extends Any<TObject> {
 
     public Collection<Property> properties() {
         return properties.values();
+    }
+
+    @Override
+    public void model(StringBuilder builder, int ident) {
+        builder.append("{\n");
+        Iterator<TObject.Property> it = properties().iterator();
+        while (it.hasNext()) {
+            TObject.Property property = it.next();
+            ident(builder, ident + 2);
+            builder.append(property.nameOrAlias());
+            builder.append(": ");
+            property.containedType().model(builder, ident + 2);
+            if (it.hasNext()) {
+                builder.append(",\n");
+            }
+        }
+        builder.append("\n");
+        ident(builder, ident);
+        builder.append("}");
     }
 
     public static class Property extends AttributableImpl<Property> implements Nameable<Property>, Descriptable<Property>, Requireable<Property>, TypeContaineable<Property> {

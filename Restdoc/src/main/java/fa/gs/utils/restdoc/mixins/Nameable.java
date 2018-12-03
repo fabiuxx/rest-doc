@@ -29,6 +29,18 @@ public interface Nameable<T extends Nameable<T>> extends Attributable<T> {
         return (T) this;
     }
 
+    default public String nameOrAlias() {
+        if (hasName()) {
+            return name();
+        }
+
+        if (hasAlias()) {
+            return alias();
+        }
+
+        return "";
+    }
+
     default public boolean hasName() {
         return has("name") && get("name") != null;
     }

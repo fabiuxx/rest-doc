@@ -15,14 +15,19 @@ import java.io.Writer;
  *
  * @author Fabio A. González Sosa
  */
-public class RequireableFormatter implements Formatter<Requireable> {
+class RequireableFormatter implements Formatter<Requireable> {
 
     public static final RequireableFormatter instance = new RequireableFormatter();
 
     @Override
     public void format(Requireable object, Writer writer, Object... args) throws IOException {
-        String txt = object.required() ? "Sí" : "No";
+        String txt = RequireableFormatter.format(object);
         TagCreator.rawHtml(txt).render(writer);
+    }
+
+    public static String format(Requireable object) {
+        String txt = object.required() ? "Sí" : "No";
+        return txt;
     }
 
 }

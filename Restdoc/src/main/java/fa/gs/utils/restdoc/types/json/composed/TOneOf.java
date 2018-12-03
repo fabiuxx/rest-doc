@@ -6,8 +6,8 @@
 package fa.gs.utils.restdoc.types.json.composed;
 
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
-import fa.gs.utils.restdoc.types.Any;
 import fa.gs.utils.restdoc.types.Type;
+import fa.gs.utils.restdoc.types.json.Any;
 import fa.gs.utils.restdoc.types.json.Literal;
 import java.util.Collection;
 import java.util.LinkedList;

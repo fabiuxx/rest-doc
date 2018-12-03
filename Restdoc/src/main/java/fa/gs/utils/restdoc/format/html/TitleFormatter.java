@@ -23,7 +23,7 @@ class TitleFormatter implements Formatter<String> {
         // Titulo general.
         if (text != null && !text.isEmpty()) {
             TagCreator.h3(text).render(writer);
-            DividerFormatter.instance.format(20, writer);
+            DividerFormatter.normal(writer);
         }
     }
 

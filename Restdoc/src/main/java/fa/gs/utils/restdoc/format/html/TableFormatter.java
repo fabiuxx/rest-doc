@@ -16,7 +16,7 @@ import java.util.Collection;
  *
  * @author Fabio A. González Sosa
  */
-public abstract class TableFormatter<T> implements Formatter<Collection<T>> {
+abstract class TableFormatter<T> implements Formatter<Collection<T>> {
 
     public abstract int getColumnsCount();
 
@@ -37,7 +37,7 @@ public abstract class TableFormatter<T> implements Formatter<Collection<T>> {
         String[] headers = getHeaders();
         float[] weights = getHeadersWeigths();
 
-        writer.write("<table class=\"table table-striped table-bordered\">");
+        writer.write("<table class=\"table table-bordered\">");
 
         // Cabecera.
         writer.write("<thead>");

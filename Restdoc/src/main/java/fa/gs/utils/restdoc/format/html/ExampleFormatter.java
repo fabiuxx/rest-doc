@@ -14,7 +14,7 @@ import java.io.Writer;
  *
  * @author Fabio A. González Sosa
  */
-public class ExampleFormatter implements Formatter<Example> {
+class ExampleFormatter implements Formatter<Example> {
 
     public static final ExampleFormatter instance = new ExampleFormatter();
 
@@ -25,7 +25,9 @@ public class ExampleFormatter implements Formatter<Example> {
         }
 
         if (object.hasValue()) {
+            writer.write("<pre>");
             TextFormatter.instance.format(object.value(), writer, args);
+            writer.write("</pre>");
         }
     }
 

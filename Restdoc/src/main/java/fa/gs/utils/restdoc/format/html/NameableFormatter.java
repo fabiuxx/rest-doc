@@ -14,7 +14,7 @@ import java.io.Writer;
  *
  * @author Fabio A. González Sosa
  */
-public class NameableFormatter implements Formatter<Nameable> {
+class NameableFormatter implements Formatter<Nameable> {
 
     public static final NameableFormatter instance = new NameableFormatter();
 
@@ -32,7 +32,7 @@ public class NameableFormatter implements Formatter<Nameable> {
             return;
         }
 
-        writer.write(TextFormatter.ND);
+        writer.write(TextFormatter.NN);
     }
 
 }

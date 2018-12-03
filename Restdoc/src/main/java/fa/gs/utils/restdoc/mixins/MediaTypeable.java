@@ -27,4 +27,8 @@ public interface MediaTypeable<T extends MediaTypeable<T>> extends Attributable<
         return (T) this;
     }
 
+    default public boolean hasMediaType() {
+        return mediaType() != null;
+    }
+
 }

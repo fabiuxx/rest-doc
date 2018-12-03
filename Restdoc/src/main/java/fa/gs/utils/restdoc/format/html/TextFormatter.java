@@ -19,8 +19,8 @@ import java.io.Writer;
  */
 class TextFormatter implements Formatter<Text> {
 
+    public static final String NN = "--";
     public static final String ND = "N/D";
-
     public static final TextFormatter instance = new TextFormatter();
 
     @Override
@@ -33,7 +33,14 @@ class TextFormatter implements Formatter<Text> {
                 div.with(p);
             }
             div.render(writer);
+        } else {
+            writer.write(ND);
         }
+    }
+
+    public void format(String line, Writer writer) throws IOException {
+        Text text = Text.instance(line);
+        format(text, writer);
     }
 
 }

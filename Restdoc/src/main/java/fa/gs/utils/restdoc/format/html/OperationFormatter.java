@@ -24,33 +24,11 @@ public class OperationFormatter implements Formatter<Operation> {
         TextFormatter.instance.format(operation.description(), writer);
         DividerFormatter.large(writer);
 
-        if (operation.request() != null) {
-            TitleFormatter.instance.format("Petición", writer);
-            writer.write("<h4>");
-            BadgeFormatter.instance.format(operation.request().verb().name(), writer);
-            writer.write("&nbsp;&nbsp;");
-            writer.write(operation.request().path().value());
-            writer.write("</h4>");
+        RequestFormatter.instance.format(operation.request(), writer);
 
-            if (operation.request().hasDescription()) {
-                TextFormatter.instance.format(operation.request().description(), writer);
-            }
+        if (!operation.responses().isEmpty()) {
+
         }
-
-        DividerFormatter.large(writer);
-
-        if (operation.request().path().hasPathParams()) {
-            SubtitleFormatter.instance.format("Path Params", writer);
-            ParamsFormatter.instance.format(operation.request().path().pathParams(), writer);
-            DividerFormatter.normal(writer);
-        }
-
-        if (operation.request().path().hasQueryParams()) {
-            SubtitleFormatter.instance.format("Query Params", writer);
-            ParamsFormatter.instance.format(operation.request().path().queryParams(), writer);
-            DividerFormatter.instance.normal(writer);
-        }
-
         writer.write(":v");
 
     }

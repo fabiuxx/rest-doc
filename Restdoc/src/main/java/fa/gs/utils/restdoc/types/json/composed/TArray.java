@@ -7,8 +7,8 @@ package fa.gs.utils.restdoc.types.json.composed;
 
 import fa.gs.utils.restdoc.mixins.Sizeable;
 import fa.gs.utils.restdoc.mixins.TypeContaineable;
-import fa.gs.utils.restdoc.types.Any;
 import fa.gs.utils.restdoc.types.Type;
+import fa.gs.utils.restdoc.types.json.Any;
 
 /**
  *
@@ -25,6 +25,11 @@ public class TArray<T extends Type> extends Any<TArray<T>> implements Sizeable<T
 
     public static <P extends Type> TArray<P> of(P type) {
         return new TArray(type);
+    }
+
+    @Override
+    public void model(StringBuilder builder, int ident) {
+        builder.append(String.format("||%s||", containedType().nameOrAlias()));
     }
 
 }

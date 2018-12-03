@@ -5,7 +5,7 @@
  */
 package fa.gs.utils.restdoc.format.html;
 
-import fa.gs.utils.restdoc.http.Param;
+import fa.gs.utils.restdoc.http.Header;
 import java.io.IOException;
 import java.io.Writer;
 
@@ -13,9 +13,9 @@ import java.io.Writer;
  *
  * @author Fabio A. González Sosa
  */
-class ParamsFormatter extends TableFormatter<Param> {
+class HeadersFormatter extends TableFormatter<Header> {
 
-    public static final ParamsFormatter instance = new ParamsFormatter();
+    public static final HeadersFormatter instance = new HeadersFormatter();
 
     @Override
     public int getColumnsCount() {
@@ -34,26 +34,23 @@ class ParamsFormatter extends TableFormatter<Param> {
     }
 
     @Override
-    public void formatRow(Param param, Writer writer, Object... args) throws IOException {
+    public void formatRow(Header header, Writer writer, Object... args) throws IOException {
         writer.write("<td>");
-        NameableFormatter.instance.format(param, writer);
+        NameableFormatter.instance.format(header, writer);
         writer.write("</td>");
 
         writer.write("<td>");
-        RequireableFormatter.instance.format(param, writer);
+        RequireableFormatter.instance.format(header, writer);
         writer.write("</td>");
 
         writer.write("<td>");
-        NameableFormatter.instance.format(param.containedType(), writer);
+        NameableFormatter.instance.format(header.containedType(), writer);
         writer.write("</td>");
 
         writer.write("<td>");
-        TextFormatter.instance.format(param.description(), writer);
-        if (param.hasExample()) {
-            DividerFormatter.small(writer);
-            WellFormatter.startBody(writer, "Ejemplo");
-            ExampleFormatter.instance.format(param.example(), writer);
-            WellFormatter.endBody(writer);
+        TextFormatter.instance.format(header.description(), writer);
+        if (header.hasExample()) {
+            ExampleFormatter.instance.format(header.example(), writer);
         }
         writer.write("</td>");
     }

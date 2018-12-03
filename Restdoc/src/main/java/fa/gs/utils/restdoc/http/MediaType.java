@@ -6,13 +6,12 @@
 package fa.gs.utils.restdoc.http;
 
 import fa.gs.utils.restdoc.mixins.AttributableImpl;
-import fa.gs.utils.restdoc.types.Type;
 
 /**
  *
  * @author Fabio A. González Sosa
  */
-public class MediaType extends AttributableImpl<MediaType> implements Type<MediaType> {
+public class MediaType extends AttributableImpl<MediaType> {
 
     public static final MediaType TEXT_PLAIN = MediaType.instance("text", "plain");
     public static final MediaType APPLICATION_JSON = MediaType.instance("application", "json");
@@ -47,7 +46,17 @@ public class MediaType extends AttributableImpl<MediaType> implements Type<Media
     }
 
     public String full() {
-        return String.format("%s/%s", type(), subType());
+        String t = normalize(type());
+        String s = normalize(subType());
+        return String.format("%s/%s", t, s);
+    }
+
+    private String normalize(String txt) {
+        if (txt == null || txt.isEmpty()) {
+            return "*";
+        } else {
+            return txt;
+        }
     }
 
 }

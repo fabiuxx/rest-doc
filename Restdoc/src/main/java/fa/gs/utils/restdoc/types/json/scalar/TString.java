@@ -6,7 +6,7 @@
 package fa.gs.utils.restdoc.types.json.scalar;
 
 import fa.gs.utils.restdoc.mixins.Patternable;
-import fa.gs.utils.restdoc.types.Any;
+import fa.gs.utils.restdoc.types.json.Any;
 
 /**
  *

@@ -43,4 +43,12 @@ class HObject<T extends HObject<T>> extends AttributableImpl<T> implements Descr
         return content;
     }
 
+    public boolean hasHeaders() {
+        return headers != null && !headers.isEmpty();
+    }
+
+    public boolean hasContent() {
+        return content != null;
+    }
+
 }

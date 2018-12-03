@@ -6,11 +6,13 @@
 package fa.gs.utils.restdoc.types;
 
 import fa.gs.utils.restdoc.mixins.Descriptable;
+import fa.gs.utils.restdoc.mixins.Modelable;
 import fa.gs.utils.restdoc.mixins.Nameable;
 
 /**
  *
  * @author Fabio A. González Sosa
  */
-public interface Type<T extends Type<T>> extends Nameable<T>, Descriptable<T> {
+public interface Type<T extends Type<T>> extends Nameable<T>, Descriptable<T>, Modelable {
+
 }

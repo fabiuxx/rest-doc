@@ -5,7 +5,6 @@
  */
 package fa.gs.utils.restdoc.types.json;
 
-import fa.gs.utils.restdoc.types.Any;
 import fa.gs.utils.restdoc.types.Type;
 import fa.gs.utils.restdoc.types.json.scalar.TBoolean;
 import fa.gs.utils.restdoc.types.json.scalar.TString;
