@@ -11,12 +11,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <artifactory.url.base>https://jfrog.edi.com.py/artifactory</artifactory.url.base>
+        <maven.skip.tests>true</maven.skip.tests>
     </properties>
     
     <repositories>
         <repository>
-            <id>Artifactory</id>
-            <url>http://192.168.0.192:8081/artifactory/librerias-java/</url>
+            <id>librerias-java</id>
+            <name>librerias-java</name>
+            <url>${artifactory.url.base}/librerias-java</url>
         </repository>
     </repositories>
     
@@ -29,8 +32,8 @@
         
         <dependency>
             <groupId>fa.gs.utils</groupId>
-            <artifactId>misc</artifactId>
-            <version>1.0.0</version>
+            <artifactId>utils</artifactId>
+            <version>0.0.2</version>
         </dependency>
     </dependencies>
     

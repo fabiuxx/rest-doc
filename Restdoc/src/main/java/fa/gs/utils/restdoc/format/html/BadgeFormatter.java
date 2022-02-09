@@ -5,7 +5,7 @@
  */
 package fa.gs.utils.restdoc.format.html;
 
-import fa.gs.misc.Args;
+import fa.gs.utils.collections.Arrays;
 import fa.gs.utils.restdoc.format.Formatter;
 import j2html.TagCreator;
 import j2html.tags.ContainerTag;
@@ -22,7 +22,7 @@ class BadgeFormatter implements Formatter<String> {
 
     @Override
     public void format(String text, Writer writer, Object... args) throws IOException {
-        String cssClass = Args.argv(args, 0, "");
+        String cssClass = Arrays.argv(args, 0, "");
         format(text, writer, cssClass);
     }
 

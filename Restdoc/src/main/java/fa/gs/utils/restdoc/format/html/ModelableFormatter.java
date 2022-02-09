@@ -5,7 +5,7 @@
  */
 package fa.gs.utils.restdoc.format.html;
 
-import fa.gs.misc.Args;
+import fa.gs.utils.collections.Arrays;
 import fa.gs.utils.restdoc.format.Formatter;
 import fa.gs.utils.restdoc.mixins.Modelable;
 import java.io.IOException;
@@ -21,7 +21,7 @@ class ModelableFormatter implements Formatter<Modelable> {
 
     @Override
     public void format(Modelable object, Writer writer, Object... args) throws IOException {
-        Integer ident = Args.argv(args, 0, 0);
+        Integer ident = Arrays.argv(args, 0, 0);
         format(object, writer, ident);
     }
 
